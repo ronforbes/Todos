@@ -4,10 +4,11 @@
 
 1. **Create a new Supabase project** at https://supabase.com
 
-2. **Run the database migrations** in the SQL Editor:
+2. **Run the database migrations** in the SQL Editor (in order):
    - Execute `supabase/migrations/001_initial_schema.sql`
    - Execute `supabase/migrations/002_storage_setup.sql`
    - Execute `supabase/migrations/003_seed_data.sql`
+   - Execute `supabase/migrations/004_fix_rls_recursion.sql` (fixes infinite recursion in RLS policies)
 
 3. **Enable Realtime** for the `items` table:
    - Go to Database → Replication
