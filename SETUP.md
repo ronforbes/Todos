@@ -8,8 +8,9 @@
    - Execute `supabase/migrations/001_initial_schema.sql`
    - Execute `supabase/migrations/002_storage_setup.sql`
    - Execute `supabase/migrations/003_seed_data.sql`
-   - **IMPORTANT**: Execute `supabase/migrations/006_fix_rls_public_schema.sql` (fixes infinite recursion - creates function in public schema)
-   - Note: Skip migrations 004 and 005 - use 006 instead as it's the correct fix
+   - Execute `supabase/migrations/006_fix_rls_public_schema.sql` (fixes infinite recursion)
+   - Execute `supabase/migrations/007_fix_couples_select_policy.sql` (fixes couple creation)
+   - Note: Skip migrations 004 and 005
 
 3. **Enable Realtime** for the `items` table:
    - Go to Database → Replication
