@@ -8,7 +8,8 @@
    - Execute `supabase/migrations/001_initial_schema.sql`
    - Execute `supabase/migrations/002_storage_setup.sql`
    - Execute `supabase/migrations/003_seed_data.sql`
-   - Execute `supabase/migrations/004_fix_rls_recursion.sql` (fixes infinite recursion in RLS policies)
+   - **IMPORTANT**: Execute `supabase/migrations/005_fix_rls_with_function.sql` (fixes infinite recursion using SECURITY DEFINER function)
+   - Note: Skip migration 004 - use 005 instead as it's the complete fix
 
 3. **Enable Realtime** for the `items` table:
    - Go to Database → Replication
